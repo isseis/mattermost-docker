@@ -25,10 +25,6 @@ services:
     ports:
       - ${HTTPS_PORT}:443
 
-  mattermost:
-    expose:
-      - "${CALLS_PORT}"
-
 configs:
   Caddyfile:
     content: |
