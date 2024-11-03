@@ -12,6 +12,8 @@ services:
     security_opt:
       - no-new-privileges:true
     pids_limit: 100
+    ports:
+      - ${HTTPS_PORT}:443
     configs:
       - source: Caddyfile
         target: /etc/caddy/Caddyfile
@@ -22,8 +24,6 @@ services:
     environment:
       # timezone inside container
       - TZ
-    ports:
-      - ${HTTPS_PORT}:443
 
 configs:
   Caddyfile:
