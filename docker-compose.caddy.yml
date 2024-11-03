@@ -4,7 +4,7 @@ services:
   caddy:
     depends_on:
       - mattermost
-    container_name: caddy_mattermost
+    container_name: mattermost-caddy
     build:
       context: .
       dockerfile: Dockerfile.caddy
